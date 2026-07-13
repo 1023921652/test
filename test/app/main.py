@@ -96,8 +96,8 @@ async def create_item(item: Item, x_token: Annotated[str, Header()]) -> Item:
 async def health():
     """健康检查：agent 是否就绪。"""
     print('hello world')
-    print('hello world')
-    print('hello world')
+    if True:
+        pass
     return {
         "status": "ok",
         "agent_ready": getattr(app.state, "agent", None) is not None,
